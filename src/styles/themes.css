@@ -1,0 +1,160 @@
+:root {
+  --radius-xl: 24px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --topbar-height: 74px;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --transition: 180ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #08080a;
+  --bg-soft: #0c0c10;
+  --surface: #111116;
+  --surface-2: #16161d;
+  --surface-3: #1e1e26;
+  --fg: #f4f4f5;
+  --muted: #a1a1ad;
+  --faint: #6f6f7b;
+  --border: #26262f;
+  --border-strong: #363642;
+  --accent: #c9f75a;
+  --accent-2: #8b5cf6;
+  --accent-contrast: #0d1004;
+  --accent-glow: rgba(201, 247, 90, 0.13);
+  --accent2-glow: rgba(139, 92, 246, 0.14);
+  --danger: #fb7185;
+  --danger-glow: rgba(251, 113, 133, 0.12);
+  --success: #4ade80;
+  --shadow: rgba(0, 0, 0, 0.72);
+  --glass: rgba(17, 17, 22, 0.72);
+  --inset-highlight: rgba(255, 255, 255, 0.045);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f2f0ea;
+  --bg-soft: #ebe8df;
+  --surface: #fffdf8;
+  --surface-2: #f7f4ec;
+  --surface-3: #eee9de;
+  --fg: #1b1b1e;
+  --muted: #66666f;
+  --faint: #8e8b82;
+  --border: #e0dbcf;
+  --border-strong: #cdc6b6;
+  --accent: #4f46e5;
+  --accent-2: #0891b2;
+  --accent-contrast: #ffffff;
+  --accent-glow: rgba(79, 70, 229, 0.1);
+  --accent2-glow: rgba(8, 145, 178, 0.1);
+  --danger: #dc2626;
+  --danger-glow: rgba(220, 38, 38, 0.08);
+  --success: #059669;
+  --shadow: rgba(66, 58, 38, 0.22);
+  --glass: rgba(255, 253, 248, 0.76);
+  --inset-highlight: rgba(255, 255, 255, 0.65);
+}
+
+:root[data-theme='latte'] {
+  color-scheme: light;
+  --bg: #e9ebf0;
+  --bg-soft: #eff1f5;
+  --surface: #fbfbfd;
+  --surface-2: #f2f4f8;
+  --surface-3: #e6e9ef;
+  --fg: #4c4f69;
+  --muted: #6c6f85;
+  --faint: #9ca0b0;
+  --border: #dce0e8;
+  --border-strong: #ccd0da;
+  --accent: #8839ef;
+  --accent-2: #04a5e5;
+  --accent-contrast: #ffffff;
+  --accent-glow: rgba(136, 57, 239, 0.1);
+  --accent2-glow: rgba(4, 165, 229, 0.1);
+  --danger: #d20f39;
+  --danger-glow: rgba(210, 15, 57, 0.08);
+  --success: #40a02b;
+  --shadow: rgba(76, 79, 105, 0.2);
+  --glass: rgba(251, 251, 253, 0.78);
+  --inset-highlight: rgba(255, 255, 255, 0.7);
+}
+
+:root[data-theme='frappe'] {
+  color-scheme: dark;
+  --bg: #232634;
+  --bg-soft: #292c3c;
+  --surface: #303446;
+  --surface-2: #292c3c;
+  --surface-3: #414559;
+  --fg: #c6d0f5;
+  --muted: #a5adce;
+  --faint: #838ba7;
+  --border: #414559;
+  --border-strong: #51576d;
+  --accent: #ca9ee6;
+  --accent-2: #99d1db;
+  --accent-contrast: #232634;
+  --accent-glow: rgba(202, 158, 230, 0.13);
+  --accent2-glow: rgba(153, 209, 219, 0.11);
+  --danger: #e78284;
+  --danger-glow: rgba(231, 130, 132, 0.1);
+  --success: #a6d189;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --glass: rgba(48, 52, 70, 0.74);
+  --inset-highlight: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme='macchiato'] {
+  color-scheme: dark;
+  --bg: #181926;
+  --bg-soft: #1e2030;
+  --surface: #24273a;
+  --surface-2: #1e2030;
+  --surface-3: #363a4f;
+  --fg: #cad3f5;
+  --muted: #a5adcb;
+  --faint: #8087a2;
+  --border: #363a4f;
+  --border-strong: #494d64;
+  --accent: #c6a0f6;
+  --accent-2: #91d7e3;
+  --accent-contrast: #181926;
+  --accent-glow: rgba(198, 160, 246, 0.13);
+  --accent2-glow: rgba(145, 215, 227, 0.11);
+  --danger: #ed8796;
+  --danger-glow: rgba(237, 135, 150, 0.1);
+  --success: #a6da95;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --glass: rgba(36, 39, 58, 0.74);
+  --inset-highlight: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme='mocha'] {
+  color-scheme: dark;
+  --bg: #11111b;
+  --bg-soft: #181825;
+  --surface: #1e1e2e;
+  --surface-2: #181825;
+  --surface-3: #313244;
+  --fg: #cdd6f4;
+  --muted: #a6adc8;
+  --faint: #7f849c;
+  --border: #313244;
+  --border-strong: #45475a;
+  --accent: #cba6f7;
+  --accent-2: #89dceb;
+  --accent-contrast: #11111b;
+  --accent-glow: rgba(203, 166, 247, 0.13);
+  --accent2-glow: rgba(137, 220, 235, 0.11);
+  --danger: #f38ba8;
+  --danger-glow: rgba(243, 139, 168, 0.1);
+  --success: #a6e3a1;
+  --shadow: rgba(0, 0, 0, 0.55);
+  --glass: rgba(30, 30, 46, 0.74);
+  --inset-highlight: rgba(255, 255, 255, 0.05);
+}

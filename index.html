@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MusViz — Music Visualizer Studio</title>
+    <meta
+      name="description"
+      content="Turn any track into a studio-grade music visual. Five scenes, artwork presets, video color tweaks, and crisp exports up to 4K 60fps — entirely in your browser."
+    />
+    <meta name="author" content="BanguDevClub" />
+    <meta name="theme-color" content="#0a0a0c" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="https://bangudevclub.github.io/musviz/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MusViz" />
+    <meta property="og:title" content="MusViz — Music Visualizer Studio" />
+    <meta
+      property="og:description"
+      content="Turn any track into a studio-grade music visual. Five scenes, artwork presets, video color tweaks, and crisp exports up to 4K 60fps — entirely in your browser."
+    />
+    <meta property="og:url" content="https://bangudevclub.github.io/musviz/" />
+    <meta property="og:image" content="https://bangudevclub.github.io/musviz/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MusViz — your music, in motion." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MusViz — Music Visualizer Studio" />
+    <meta
+      name="twitter:description"
+      content="Turn any track into a studio-grade music visual. Five scenes, artwork presets, video color tweaks, and crisp exports up to 4K 60fps — entirely in your browser."
+    />
+    <meta name="twitter:image" content="https://bangudevclub.github.io/musviz/og.png" />
+
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./src/assets/fonts/outfit-latin.woff2"
+      crossorigin
+    />
+
+    <script>
+      (() => {
+        try {
+          const themes = ['dark', 'light', 'latte', 'frappe', 'macchiato', 'mocha'];
+          const stored = localStorage.getItem('musviz:theme');
+          document.documentElement.dataset.theme = themes.includes(stored) ? stored : 'dark';
+        } catch {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MusViz",
+        "url": "https://bangudevclub.github.io/musviz/",
+        "description": "A browser-native music visualizer studio with five reactive scenes, image presets, independent video color tweaks, six interface themes, and 4K 60fps export.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any (modern browser)",
+        "browserRequirements": "Requires WebCodecs",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "codeRepository": "https://github.com/BanguDevClub/musviz",
+        "author": {
+          "@type": "Organization",
+          "name": "BanguDevClub",
+          "url": "https://github.com/BanguDevClub"
+        }
+      }
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #0a0a0c;
+      }
+      .boot {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        color: #c9f75a;
+        font:
+          600 18px/1 system-ui,
+          sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="boot">MusViz</div></div>
+    <noscript>
+      <p style="padding: 2rem; color: #f4f4f5; font-family: system-ui, sans-serif">
+        MusViz needs JavaScript to decode audio and render your visual.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
